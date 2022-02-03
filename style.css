@@ -1,0 +1,142 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Manrope', sans-serif;
+}
+
+:root {
+	--Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+	--Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+	--Grayish-Blue: hsl(212, 23%, 69%);
+	--Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+body {
+	height: 100vh;
+	width: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.card {
+	display: flex;
+
+	box-shadow: 1px 12px 30px 5px var(--Grayish-Blue);
+	box-shadow: 1px 15px 30px 2px var(--Desaturated-Dark-Blue);
+
+	width: 50vw;
+
+	border-radius: 15px;
+}
+.card__image {
+	flex: 1 50%;
+	background-size: cover;
+	background-image: url(images/drawers.jpg);
+}
+
+.card__image--mobile img {
+	width: 100%;
+
+	border-radius: 15px 0px 0px 15px;
+}
+
+.card__info {
+	padding: 1.7rem 0.8rem;
+	flex: 1 50%;
+}
+
+.card__title,
+.card__description {
+	margin-bottom: 1rem;
+}
+
+.card__title {
+	font-size: 1.15rem;
+	font-weight: 700;
+
+	color: var(--Very-Dark-Grayish-Blue);
+}
+.card__description {
+	font-size: 15px;
+
+	color: var(--Desaturated-Dark-Blue);
+}
+.card__profile {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.card__avatar {
+	display: flex;
+	align-items: center;
+	align-items: center;
+
+	gap: 1rem;
+}
+.card__avatar img {
+	width: 17%;
+	border-radius: 100%;
+}
+.card__avatar,
+.card__share {
+	margin-top: 1rem;
+}
+
+.card__credits {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.card__credits h4 {
+	font-weight: 700;
+	color: var(--Very-Dark-Grayish-Blue);
+}
+.card__credits span {
+	color: var(--Grayish-Blue);
+}
+
+.card__btn {
+	width: 1.7rem;
+}
+
+.card__share {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	padding: 1.5rem 1rem;
+
+	background-color: var(--Very-Dark-Grayish-Blue);
+}
+
+.card__icons {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+.card__share p {
+	text-transform: uppercase;
+	color: var(--Grayish-Blue);
+}
+
+.invisibility {
+	display: none;
+}
+@media (max-width: 875px) {
+	.card {
+		width: 90vw;
+		flex-direction: column;
+	}
+
+	.card__avatar,
+	.card__share {
+		margin-top: 1rem;
+	}
+	.card__avatar img {
+		width: 25%;
+	}
+}
